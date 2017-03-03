@@ -2,6 +2,8 @@ package models
 
 type Tattoo struct {
 	Artwork
+
+	MadeDate string `json:"tattoodate,omitempty" toml:"tattoodate"`
 }
 
 // Address stores the location information where the work was made

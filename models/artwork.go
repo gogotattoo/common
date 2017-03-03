@@ -10,7 +10,7 @@ type Artwork struct {
 	Extra       string `json:"extra,omitempty"`
 	Article     string `json:"article,omitempty"`
 
-	MadeDate        string   `json:"tattoodate,omitempty" toml:"tattoodate"`
+	MadeDate        string   `json:"made_date,omitempty" toml:"made_date"`
 	PublishDate     string   `json:"date,omitempty"`
 	Tags            []string `json:"tags,omitempty"`
 	BodyParts       []string `json:"bodypart,omitempty"`

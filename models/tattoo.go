@@ -1,9 +1,10 @@
 package models
 
+// Tattoo represents a tattoo work, can keep a reference to the design it was based on
 type Tattoo struct {
 	Artwork
 
-	MadeDate string `json:"tattoodate,omitempty" toml:"tattoodate"`
+	Design *Design
 }
 
 // Address stores the location information where the work was made

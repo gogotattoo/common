@@ -7,15 +7,15 @@ type Artwork struct {
 	Link  string `json:"link,omitempty"`
 	Title string `json:"title,omitempty" toml:"title"`
 	//MadeLocation Address  `json:"made_at"`
-	DurationMin int    `json:"duration_min,omitempty"`
-	Gender      string `json:"gender,omitempty"`
-	Extra       string `json:"extra,omitempty"`
-	Article     string `json:"article,omitempty"`
+	DurationMin int    `json:"duration_min,omitempty" toml:"duration_min"`
+	Gender      string `json:"gender,omitempty" toml:"gender"`
+	Extra       string `json:"extra,omitempty" toml:"extra"`
+	Article     string `json:"article,omitempty" toml:"article"`
 
 	MadeDate        string   `json:"made_date,omitempty" toml:"made_date"`
 	PublishDate     string   `json:"date,omitempty" toml:"date"`
-	Tags            []string `json:"tags,omitempty"`
-	BodyParts       []string `json:"bodypart,omitempty"`
+	Tags            []string `json:"tags,omitempty" toml:"tags"`
+	BodyParts       []string `json:"bodypart,omitempty" toml:"bodypart"`
 	ImageIpfs       string   `json:"image_ipfs" toml:"image_ipfs"`
 	ImagesIpfs      []string `json:"images_ipfs,omitempty" toml:"images_ipfs"`
 	LocationCity    string   `json:"made_at_city" toml:"location_city"`

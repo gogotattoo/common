@@ -13,6 +13,7 @@ type Artist struct {
 	About       string `json:"about" toml:"about"`
 	Origin      string `json:"origin" toml:"origin"`
 	LocationNow string `json:"location_now" toml:"location_now"`
+	AvatarIpfs  string `json:"avatar_ipfs" toml:"avatar_ipfs"`
 }
 
 // Artists is plural for Artist, supports sort.Sort interface

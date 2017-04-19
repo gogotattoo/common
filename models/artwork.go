@@ -1,5 +1,7 @@
 package models
 
+import "time"
+
 // Artwork is a struct for storing a general information for a piece of art,
 // as well as the processes of this artwork being done (images_ipfs)
 type Artwork struct {
@@ -21,6 +23,15 @@ type Artwork struct {
 	LocationCity    string   `json:"made_at_city" toml:"location_city"`
 	LocationCountry string   `json:"made_at_country" toml:"location_country"`
 	MadeAtShop      string   `json:"made_at_shop,omitempty" toml:"made_at_shop"`
+}
+
+func (work *Artwork) FormattedPublishDate() string {
+	t, _ := time.Parse(time.RFC3339, work.PublishDate)
+	return t.Format("2006/01/02")
+}
+func (work *Artwork) FormattedMadeDate() string {
+	t, _ := time.Parse(time.RFC3339, work.MadeDate)
+	return t.Format("2006/01/02")
 }
 
 // Artworks is plural for Artwork, supports sort.Sort interface

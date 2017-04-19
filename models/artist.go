@@ -3,12 +3,16 @@ package models
 // Artist is a struct for storing a general information of the artists,
 // as well as some necessary info, it'll expand
 type Artist struct {
-	Link     string   `json:"link,omitempty" toml:"link"`
-	Name     string   `json:"name,omitempty" toml:"name"`
+	Link     string   `json:"link" toml:"link"`
+	Name     string   `json:"name" toml:"name"`
 	Services []string `json:"services,omitempty" toml:"services"`
 
-	JoinDate  string `json:"join_date,omitempty" toml:"join_date"`
-	BirthDate string `json:"birth_date,omitempty" toml:"birth_date"`
+	JoinDate    string `json:"join_date" toml:"join_date"`
+	BirthDate   string `json:"birth_date" toml:"birth_date"`
+	Experience  string `json:"experience" toml:"experience"`
+	About       string `json:"about" toml:"about"`
+	Origin      string `json:"origin" toml:"origin"`
+	LocationNow string `json:"location_now" toml:"location_now"`
 }
 
 // Artists is plural for Artist, supports sort.Sort interface

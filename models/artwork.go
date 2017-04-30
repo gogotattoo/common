@@ -23,6 +23,7 @@ type Artwork struct {
 	LocationCity    string   `json:"made_at_city" toml:"location_city"`
 	LocationCountry string   `json:"made_at_country" toml:"location_country"`
 	MadeAtShop      string   `json:"made_at_shop,omitempty" toml:"made_at_shop"`
+	Previous        string   `json:"previous,omitempty" toml:"previous"`
 }
 
 func (work *Artwork) FormattedPublishDate() string {

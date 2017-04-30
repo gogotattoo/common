@@ -7,6 +7,9 @@ type Tattoo struct {
 	Design *Design
 }
 
+// Tattoos represents array of tattoos
+type Tattoos []Tattoo
+
 // Address stores the location information where the work was made
 // type Address struct {
 // 	City    string `json:"city,omitempty"`

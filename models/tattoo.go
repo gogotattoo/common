@@ -4,7 +4,8 @@ package models
 type Tattoo struct {
 	Artwork
 
-	Design *Design
+	Design     *Design
+	Blockchain Blockchain `json:"blockchain,omitempty" toml:"blockchain"`
 }
 
 // Tattoos represents array of tattoos

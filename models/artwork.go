@@ -24,6 +24,12 @@ type Artwork struct {
 	LocationCountry string   `json:"made_at_country" toml:"location_country"`
 	MadeAtShop      string   `json:"made_at_shop,omitempty" toml:"made_at_shop"`
 	Previous        string   `json:"previous,omitempty" toml:"previous"`
+
+	Blockchain blockchain `json:"blockchain,omitempty" toml:"blockchain"`
+}
+type blockchain struct {
+	steem string `json:"steem,omitempty" toml:"steem"`
+	golos string `json:"golos,omitempty" toml:"golos"`
 }
 
 func (work *Artwork) FormattedPublishDate() string {

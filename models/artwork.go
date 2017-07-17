@@ -20,6 +20,7 @@ type Artwork struct {
 	BodyParts       []string `json:"bodypart,omitempty" toml:"bodypart"`
 	ImageIpfs       string   `json:"image_ipfs" toml:"image_ipfs"`
 	ImagesIpfs      []string `json:"images_ipfs,omitempty" toml:"images_ipfs"`
+	VideosIpfs      []string `json:"videos_ipfs,omitempty" toml:"videos_ipfs"`
 	LocationCity    string   `json:"made_at_city" toml:"location_city"`
 	LocationCountry string   `json:"made_at_country" toml:"location_country"`
 	MadeAtShop      string   `json:"made_at_shop,omitempty" toml:"made_at_shop"`
@@ -27,9 +28,10 @@ type Artwork struct {
 
 	Blockchain blockchain `json:"blockchain,omitempty" toml:"blockchain"`
 }
+
 type blockchain struct {
-	steem string `json:"steem,omitempty" toml:"steem"`
-	golos string `json:"golos,omitempty" toml:"golos"`
+	Steem string `json:"steem,omitempty" toml:"steem"`
+	Golos string `json:"golos,omitempty" toml:"golos"`
 }
 
 func (work *Artwork) FormattedPublishDate() string {

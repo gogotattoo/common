@@ -7,13 +7,14 @@ type Artist struct {
 	Name     string   `json:"name" toml:"name"`
 	Services []string `json:"services,omitempty" toml:"services"`
 
-	JoinDate    string `json:"join_date" toml:"join_date"`
-	BirthDate   string `json:"birth_date" toml:"birth_date"`
-	Experience  string `json:"experience" toml:"experience"`
-	About       string `json:"about" toml:"about"`
-	Origin      string `json:"origin" toml:"origin"`
-	LocationNow string `json:"location_now" toml:"location_now"`
-	AvatarIpfs  string `json:"avatar_ipfs" toml:"avatar_ipfs"`
+	JoinDate      string `json:"join_date" toml:"join_date"`
+	BirthDate     string `json:"birth_date" toml:"birth_date"`
+	Experience    string `json:"experience" toml:"experience"`
+	About         string `json:"about" toml:"about"`
+	Origin        string `json:"origin" toml:"origin"`
+	LocationNow   string `json:"location_now" toml:"location_now"`
+	AvatarIpfs    string `json:"avatar_ipfs" toml:"avatar_ipfs"`
+	CurrentStudio string `json:"current_studio" toml:"current_studio"`
 }
 
 // Artists is plural for Artist, supports sort.Sort interface
